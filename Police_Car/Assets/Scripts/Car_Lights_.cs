@@ -13,8 +13,8 @@ public class Car_Lights_ : MonoBehaviour
     public Renderer taillight_r_1;
 
     // light objects
-    public GameObject Back_Left_Light;
-    public GameObject Back_Right_Light;
+    //public GameObject Back_Left_Light;
+    //public GameObject Back_Right_Light;
     public GameObject Front_Left_Light;
     public GameObject Front_Right_Light;
 
@@ -23,17 +23,17 @@ public class Car_Lights_ : MonoBehaviour
     public Material Front_TurnOnLight;
 
     // back lights => red
-    public Material Break_TurnOFFLight;
-    public Material Break_TurnOnLight;
+    //public Material Break_TurnOFFLight;
+    //public Material Break_TurnOnLight;
 
 
     bool front_light_flag = false;
-    bool break_light_flag = false;
+    //bool break_light_flag = false;
 
     void Start()
     {
-        Back_Left_Light.SetActive(false);
-        Back_Right_Light.SetActive(false);
+        //Back_Left_Light.SetActive(false);
+        //Back_Right_Light.SetActive(false);
         Front_Left_Light.SetActive(false);
         Front_Right_Light.SetActive(false);
     }
@@ -50,11 +50,11 @@ public class Car_Lights_ : MonoBehaviour
         }
 
         // whenever the H key pressed, change the situation of break lights (the break_light_flag)
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            break_light_flag = !break_light_flag;
-            set_break_lights(break_light_flag);
-        }
+        //if (Input.GetKeyDown(KeyCode.H))
+        //{
+        //    break_light_flag = !break_light_flag;
+        //    set_break_lights(break_light_flag);
+        //}
     }
 
     void set_front_lights(bool front_flag)
@@ -73,17 +73,17 @@ public class Car_Lights_ : MonoBehaviour
         Debug.Log("Front_Right_Light Active: " + Front_Right_Light.activeSelf);
     }
 
-    void set_break_lights(bool break_flag)
-    {
-        taillight_l_1.material = break_flag ? Break_TurnOnLight : Break_TurnOFFLight;
-        taillight_r_1.material = break_flag ? Break_TurnOnLight : Break_TurnOFFLight;
+    //void set_break_lights(bool break_flag)
+    //{
+    //    taillight_l_1.material = break_flag ? Break_TurnOnLight : Break_TurnOFFLight;
+    //    taillight_r_1.material = break_flag ? Break_TurnOnLight : Break_TurnOFFLight;
 
-        Back_Left_Light.SetActive(break_flag);
-        Back_Right_Light.SetActive(break_flag);
+    //    Back_Left_Light.SetActive(break_flag);
+    //    Back_Right_Light.SetActive(break_flag);
 
-        Debug.Log("Lights Active: " + break_flag);
-        Debug.Log("Back_Left_Light Active: " + Back_Left_Light.activeSelf);
-        Debug.Log("Back_Right_Light Active: " + Back_Right_Light.activeSelf);
+    //    Debug.Log("Lights Active: " + break_flag);
+    //    Debug.Log("Back_Left_Light Active: " + Back_Left_Light.activeSelf);
+    //    Debug.Log("Back_Right_Light Active: " + Back_Right_Light.activeSelf);
 
-    }
+    //}
 }
