@@ -36,6 +36,5 @@ public class Car_Movement : MonoBehaviour
             car_rb.AddForce(-speed * Time.deltaTime, 0, 0);
         }
 
-
     }
 }
